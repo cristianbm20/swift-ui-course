@@ -19,7 +19,7 @@ struct ContentView: View {
         path.addLine(to: CGPoint(x: 350, y: 220))
         path.addLine(to: CGPoint(x: 300, y: 220))
         
-        path.addQuadCurve(to: CGPoint(x: 50, y: 220), control: controlPoint)
+        path.addQuadCurve(to: CGPoint(x: 100, y: 220), control: controlPoint)
         
         if drawTriangle {
           path.addLine(to: CGPoint(x: 300, y: 220))

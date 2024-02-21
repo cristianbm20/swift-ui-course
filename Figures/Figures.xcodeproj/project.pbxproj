@@ -13,6 +13,8 @@
 		9F4363202B852C4500054838 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F43631F2B852C4500054838 /* Preview Assets.xcassets */; };
 		9F9620E92B8600EC0075A0B2 /* Arcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9620E82B8600EC0075A0B2 /* Arcs.swift */; };
 		9F9620EB2B86091D0075A0B2 /* RoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9620EA2B86091D0075A0B2 /* RoundedRectangle.swift */; };
+		9FDE2E142B86523B007A8B03 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE2E132B86523B007A8B03 /* Progress.swift */; };
+		9FDE2E162B8659E1007A8B03 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDE2E152B8659E1007A8B03 /* DonutChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		9F43631F2B852C4500054838 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F9620E82B8600EC0075A0B2 /* Arcs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arcs.swift; sourceTree = "<group>"; };
 		9F9620EA2B86091D0075A0B2 /* RoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangle.swift; sourceTree = "<group>"; };
+		9FDE2E132B86523B007A8B03 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
+		9FDE2E152B8659E1007A8B03 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				9F43631A2B852C4400054838 /* ContentView.swift */,
 				9F9620E82B8600EC0075A0B2 /* Arcs.swift */,
 				9F9620EA2B86091D0075A0B2 /* RoundedRectangle.swift */,
+				9FDE2E132B86523B007A8B03 /* Progress.swift */,
+				9FDE2E152B8659E1007A8B03 /* DonutChart.swift */,
 				9F43631C2B852C4500054838 /* Assets.xcassets */,
 				9F43631E2B852C4500054838 /* Preview Content */,
 			);
@@ -143,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FDE2E142B86523B007A8B03 /* Progress.swift in Sources */,
 				9F43631B2B852C4400054838 /* ContentView.swift in Sources */,
 				9F9620E92B8600EC0075A0B2 /* Arcs.swift in Sources */,
+				9FDE2E162B8659E1007A8B03 /* DonutChart.swift in Sources */,
 				9F4363192B852C4400054838 /* FiguresApp.swift in Sources */,
 				9F9620EB2B86091D0075A0B2 /* RoundedRectangle.swift in Sources */,
 			);
