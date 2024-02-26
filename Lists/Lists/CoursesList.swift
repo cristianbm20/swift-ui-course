@@ -58,18 +58,20 @@ struct CompleteInfoView: View {
       
       Text(course.name)
         .fontWeight(.bold)
-        .font(.system(.largeTitle, design: .rounded))
+        .font(.system(.title, design: .rounded))
         .foregroundColor(.primary)
         .minimumScaleFactor(0.3)
       
-      Text(course.createdBy!)
-        .font(.title3)
-        .foregroundColor(.secondary)
+      if course.createdBy != nil {
+        Text(course.createdBy!)
+          .font(.title3)
+          .foregroundColor(.secondary)
+      }
       
       if let score = course.score {
         HStack {
           Text("Score: ")
-            .font(.headline)
+            .font(.system(.headline, design: .rounded))
             .foregroundStyle(.primary)
           ForEach(1...score, id: \.self) { _ in
             Image(systemName: "star.fill")
@@ -78,10 +80,12 @@ struct CompleteInfoView: View {
           }
         }
       }
-        
-      Text(course.description!)
-        .font(.headline)
-        .foregroundColor(.secondary)
+      
+      if course.description != nil {
+        Text(course.description!)
+          .font(.headline)
+          .foregroundColor(.secondary)
+      }
       
     }
     .padding(.top)
