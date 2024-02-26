@@ -12,6 +12,7 @@
 		9F6936822B8898D600522B3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6936812B8898D600522B3C /* Assets.xcassets */; };
 		9F6936852B8898D600522B3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6936842B8898D600522B3C /* Preview Assets.xcassets */; };
 		9F6936962B88A5F800522B3C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6936952B88A5F800522B3C /* Course.swift */; };
+		9FA4AF652B8C894600BB5239 /* CoursesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4AF642B8C894600BB5239 /* CoursesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		9F6936812B8898D600522B3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F6936842B8898D600522B3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F6936952B88A5F800522B3C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		9FA4AF642B8C894600BB5239 /* CoursesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				9F69367D2B8898D500522B3C /* ListsApp.swift */,
 				9F69367F2B8898D500522B3C /* ContentView.swift */,
+				9FA4AF642B8C894600BB5239 /* CoursesList.swift */,
 				9F6936952B88A5F800522B3C /* Course.swift */,
 				9F6936812B8898D600522B3C /* Assets.xcassets */,
 				9F6936832B8898D600522B3C /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA4AF652B8C894600BB5239 /* CoursesList.swift in Sources */,
 				9F6936962B88A5F800522B3C /* Course.swift in Sources */,
 				9F6936802B8898D500522B3C /* ContentView.swift in Sources */,
 				9F69367E2B8898D500522B3C /* ListsApp.swift in Sources */,
