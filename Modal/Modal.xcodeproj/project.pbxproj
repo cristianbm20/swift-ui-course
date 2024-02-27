@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FB489062B8E4DD0005AAF96 /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB489052B8E4DD0005AAF96 /* Boss.swift */; };
+		9FB489082B8E4FD4005AAF96 /* BossDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB489072B8E4FD4005AAF96 /* BossDetailView.swift */; };
 		9FD23BBB2B8E4A5E00436FBC /* ModalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD23BBA2B8E4A5E00436FBC /* ModalApp.swift */; };
 		9FD23BBD2B8E4A5E00436FBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD23BBC2B8E4A5E00436FBC /* ContentView.swift */; };
 		9FD23BBF2B8E4A5F00436FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD23BBE2B8E4A5F00436FBC /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9FB489052B8E4DD0005AAF96 /* Boss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
+		9FB489072B8E4FD4005AAF96 /* BossDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BossDetailView.swift; sourceTree = "<group>"; };
 		9FD23BB72B8E4A5E00436FBC /* Modal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD23BBA2B8E4A5E00436FBC /* ModalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalApp.swift; sourceTree = "<group>"; };
 		9FD23BBC2B8E4A5E00436FBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				9FD23BBA2B8E4A5E00436FBC /* ModalApp.swift */,
 				9FD23BBC2B8E4A5E00436FBC /* ContentView.swift */,
+				9FB489052B8E4DD0005AAF96 /* Boss.swift */,
+				9FB489072B8E4FD4005AAF96 /* BossDetailView.swift */,
 				9FD23BBE2B8E4A5F00436FBC /* Assets.xcassets */,
 				9FD23BC02B8E4A5F00436FBC /* Preview Content */,
 			);
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB489082B8E4FD4005AAF96 /* BossDetailView.swift in Sources */,
 				9FD23BBD2B8E4A5E00436FBC /* ContentView.swift in Sources */,
 				9FD23BBB2B8E4A5E00436FBC /* ModalApp.swift in Sources */,
+				9FB489062B8E4DD0005AAF96 /* Boss.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
