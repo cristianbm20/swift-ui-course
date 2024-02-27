@@ -59,14 +59,14 @@ struct ContentView: View {
         .listRowSeparatorTint(.blue)
       }
       .listStyle(.insetGrouped)
-      //      .background(
-      //        Image("calculation")
-      //          .resizable()
-      //          .scaledToFill()
-      //          .clipped()
-      //          .ignoresSafeArea()
-      //      )
-      //    .scrollContentBackground(.hidden)
+//            .background(
+//              Image("calculation")
+//                .resizable()
+//                .scaledToFill()
+//                .clipped()
+//                .ignoresSafeArea()
+//            )
+//          .scrollContentBackground(.hidden)
       .navigationTitle("All Courses")
       .navigationBarTitleDisplayMode(.automatic)
     }
