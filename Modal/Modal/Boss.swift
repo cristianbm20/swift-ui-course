@@ -9,13 +9,13 @@ import Foundation
 
 struct Boss: Identifiable {
   var id = UUID()
-  var name: String?
-  var author: String?
-  var difficulty: Int?
-  var excerpt: String?
-  var image: String?
-  var content: String?
-  var url: String?
+  var name: String
+  var author: String
+  var difficulty: Int
+  var excerpt: String
+  var image: String
+  var content: String
+  var url: String
 }
 
 #if DEBUG
