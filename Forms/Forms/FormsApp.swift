@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct FormsApp: App {
+  var settings = SettingsFactory()
+  
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      // Dependency Injection
+      ContentView().environmentObject(settings)
     }
   }
 }

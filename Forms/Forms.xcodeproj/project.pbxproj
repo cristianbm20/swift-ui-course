@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F47EC142B97740A0041DAF5 /* SettingsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47EC132B97740A0041DAF5 /* SettingsFactory.swift */; };
 		9F8FC7B22B962EBA00DB0613 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FC7B12B962EBA00DB0613 /* SettingsView.swift */; };
 		9F8FC7B42B963A9800DB0613 /* CourseDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8FC7B32B963A9800DB0613 /* CourseDifficulty.swift */; };
 		9FFB0A6F2B922E02002DE5A7 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB0A6E2B922E02002DE5A7 /* CourseDetailView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F47EC132B97740A0041DAF5 /* SettingsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFactory.swift; sourceTree = "<group>"; };
 		9F8FC7B12B962EBA00DB0613 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9F8FC7B32B963A9800DB0613 /* CourseDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDifficulty.swift; sourceTree = "<group>"; };
 		9FFB0A6E2B922E02002DE5A7 /* CourseDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				9FFB6EF32B90F83E00F23310 /* Course.swift */,
 				9F8FC7B12B962EBA00DB0613 /* SettingsView.swift */,
 				9F8FC7B32B963A9800DB0613 /* CourseDifficulty.swift */,
+				9F47EC132B97740A0041DAF5 /* SettingsFactory.swift */,
 				9FFB6EFB2B91032100F23310 /* Assets.xcassets */,
 				9FFB6EEB2B90F74200F23310 /* Preview Content */,
 			);
@@ -154,6 +157,7 @@
 				9FFB0A6F2B922E02002DE5A7 /* CourseDetailView.swift in Sources */,
 				9FFB6EF42B90F83E00F23310 /* Course.swift in Sources */,
 				9FFB6EE82B90F74100F23310 /* ContentView.swift in Sources */,
+				9F47EC142B97740A0041DAF5 /* SettingsFactory.swift in Sources */,
 				9FFB6EE62B90F74100F23310 /* FormsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -28,6 +28,7 @@ struct ContentView: View {
   @State private var selectedCourse: Course?
   @State private var showSettings = false
   
+  @EnvironmentObject var settings: SettingsFactory
   
   // Navbar customization with UIKit
   init() {
@@ -53,42 +54,44 @@ struct ContentView: View {
   var body: some View {
     NavigationStack {
       List {
-        ForEach(courses) { course in
-          NavigationLink(destination: CourseDetailView(course: course)) {
-            InfoImageRow(course: course)
-              .contextMenu {
-                if !course.isPurchased {
+        ForEach(courses.sorted(by: DisplayOrder(type: settings.displayOrder).sortPredicate())) { course in
+          if shouldShow(course: course) {
+            NavigationLink(destination: CourseDetailView(course: course)) {
+              InfoImageRow(course: course)
+                .contextMenu {
+                  if !course.isPurchased {
+                    Button {
+                      purchase(course: course)
+                    } label: {
+                      HStack {
+                        Image(systemName: "dollarsign")
+                        Text("Buy")
+                      }
+                    }
+                  }
+                  
                   Button {
-                    purchase(course: course)
+                    favourite(course: course)
                   } label: {
                     HStack {
-                      Image(systemName: "dollarsign")
-                      Text("Purchase")
+                      Image(systemName: "star.fill")
+                      Text("Add favourite")
+                    }
+                  }
+                  
+                  Button {
+                    delete(course: course)
+                  } label: {
+                    HStack {
+                      Image(systemName: "trash.fill")
+                      Text("Delete")
                     }
                   }
                 }
-                
-                Button {
-                  favourite(course: course)
-                } label: {
-                  HStack {
-                    Image(systemName: "star.fill")
-                    Text("Add favourite")
-                  }
+                .onTapGesture {
+                  selectedCourse = course
                 }
-                
-                Button {
-                  delete(course: course)
-                } label: {
-                  HStack {
-                    Image(systemName: "trash.fill")
-                    Text("Delete")
-                  }
-                }
-              }
-              .onTapGesture {
-                selectedCourse = course
-              }
+            }
           }
         }
         .listRowSeparatorTint(.blue)
@@ -107,7 +110,7 @@ struct ContentView: View {
         }
       }
       .sheet(isPresented: $showSettings) {
-        SettingsView()
+        SettingsView().environmentObject(settings)
       }
     }
     .tint(.blue)
@@ -132,11 +135,23 @@ struct ContentView: View {
     }
   }
   
+  private func shouldShow(course: Course) -> Bool {
+    let purchasedCondition = !settings.showPurchasedOnly || (settings.showPurchasedOnly && course.isPurchased)
+    
+    let favouriteCondition = !settings.showFavouriteOnly || (settings.showFavouriteOnly && course.isFavourite)
+    
+    let priceCondition = course.price <= settings.maxPriceShow
+    
+    let difficultyCondition = course.difficulty <= settings.maxDifficultyLevel
+    
+    return purchasedCondition && favouriteCondition && difficultyCondition && priceCondition
+  }
+  
 }
 
 
 #Preview {
-  ContentView()
+  ContentView().environmentObject(SettingsFactory())
 }
 
 struct InfoImageRow: View {
