@@ -12,6 +12,7 @@
 		9F1340442B9A056300A5C732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F1340432B9A056300A5C732 /* Assets.xcassets */; };
 		9F1340472B9A056300A5C732 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F1340462B9A056300A5C732 /* Preview Assets.xcassets */; };
 		9F13404E2B9A134700A5C732 /* CombineGesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13404D2B9A134700A5C732 /* CombineGesturesView.swift */; };
+		9F1340502B9A263600A5C732 /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F13404F2B9A263600A5C732 /* DragState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		9F1340432B9A056300A5C732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F1340462B9A056300A5C732 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F13404D2B9A134700A5C732 /* CombineGesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineGesturesView.swift; sourceTree = "<group>"; };
+		9F13404F2B9A263600A5C732 /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				9F13403F2B9A056200A5C732 /* GesturesApp.swift */,
 				9F1340412B9A056200A5C732 /* ContentView.swift */,
 				9F13404D2B9A134700A5C732 /* CombineGesturesView.swift */,
+				9F13404F2B9A263600A5C732 /* DragState.swift */,
 				9F1340432B9A056300A5C732 /* Assets.xcassets */,
 				9F1340452B9A056300A5C732 /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F1340422B9A056200A5C732 /* ContentView.swift in Sources */,
+				9F1340502B9A263600A5C732 /* DragState.swift in Sources */,
 				9F1340402B9A056200A5C732 /* GesturesApp.swift in Sources */,
 				9F13404E2B9A134700A5C732 /* CombineGesturesView.swift in Sources */,
 			);
