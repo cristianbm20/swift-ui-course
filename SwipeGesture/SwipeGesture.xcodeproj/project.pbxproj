@@ -13,6 +13,7 @@
 		9F7338572B9F4AB80091E5AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7338562B9F4AB80091E5AA /* Preview Assets.xcassets */; };
 		9F73385E2B9F4B470091E5AA /* Boss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73385D2B9F4B470091E5AA /* Boss.swift */; };
 		9F7338602B9F51440091E5AA /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73385F2B9F51440091E5AA /* CardView.swift */; };
+		9F7338622B9F5F400091E5AA /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7338612B9F5F400091E5AA /* DragState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		9F7338562B9F4AB80091E5AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F73385D2B9F4B470091E5AA /* Boss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Boss.swift; sourceTree = "<group>"; };
 		9F73385F2B9F51440091E5AA /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9F7338612B9F5F400091E5AA /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 		9F7338432B9F4AB70091E5AA = {
 			isa = PBXGroup;
 			children = (
+				9F7338612B9F5F400091E5AA /* DragState.swift */,
 				9F73384E2B9F4AB70091E5AA /* SwipeGesture */,
 				9F73384D2B9F4AB70091E5AA /* Products */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7338522B9F4AB70091E5AA /* ContentView.swift in Sources */,
+				9F7338622B9F5F400091E5AA /* DragState.swift in Sources */,
 				9F7338502B9F4AB70091E5AA /* SwipeGestureApp.swift in Sources */,
 				9F7338602B9F51440091E5AA /* CardView.swift in Sources */,
 				9F73385E2B9F4B470091E5AA /* Boss.swift in Sources */,
