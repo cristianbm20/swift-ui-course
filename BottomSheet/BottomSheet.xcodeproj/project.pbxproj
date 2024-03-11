@@ -13,6 +13,7 @@
 		9F7A98692B9F07170008019F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7A98682B9F07170008019F /* Preview Assets.xcassets */; };
 		9F7A98702B9F07BB0008019F /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A986F2B9F07BB0008019F /* Course.swift */; };
 		9F7A98742B9F09640008019F /* BasicSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A98732B9F09640008019F /* BasicSheet.swift */; };
+		9F7A98762B9F0CDD0008019F /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A98752B9F0CDD0008019F /* CourseDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		9F7A98682B9F07170008019F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F7A986F2B9F07BB0008019F /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		9F7A98732B9F09640008019F /* BasicSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSheet.swift; sourceTree = "<group>"; };
+		9F7A98752B9F0CDD0008019F /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				9F7A98632B9F07160008019F /* ContentView.swift */,
 				9F7A986F2B9F07BB0008019F /* Course.swift */,
 				9F7A98732B9F09640008019F /* BasicSheet.swift */,
+				9F7A98752B9F0CDD0008019F /* CourseDetailView.swift */,
 				9F7A98652B9F07170008019F /* Assets.xcassets */,
 				9F7A98672B9F07170008019F /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7A98762B9F0CDD0008019F /* CourseDetailView.swift in Sources */,
 				9F7A98702B9F07BB0008019F /* Course.swift in Sources */,
 				9F7A98642B9F07160008019F /* ContentView.swift in Sources */,
 				9F7A98742B9F09640008019F /* BasicSheet.swift in Sources */,
