@@ -12,9 +12,10 @@
 		9F1005B92BA04FCB00B76CAE /* TransactionsHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1005B82BA04FCB00B76CAE /* TransactionsHistoryView.swift */; };
 		9F1005BB2BA0595600B76CAE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1005BA2BA0595600B76CAE /* CardView.swift */; };
 		9F7338702B9F892E0091E5AA /* AppleWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F73386F2B9F892E0091E5AA /* AppleWalletApp.swift */; };
-		9F7338722B9F892E0091E5AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7338712B9F892E0091E5AA /* ContentView.swift */; };
+		9F7338722B9F892E0091E5AA /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7338712B9F892E0091E5AA /* WalletView.swift */; };
 		9F7338742B9F89300091E5AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7338732B9F89300091E5AA /* Assets.xcassets */; };
 		9F7338772B9F89300091E5AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7338762B9F89300091E5AA /* Preview Assets.xcassets */; };
+		9FF69A4A2BA0AD1F00FEAB1F /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF69A492BA0AD1F00FEAB1F /* DragState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +25,10 @@
 		9F1005BA2BA0595600B76CAE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9F73386C2B9F892E0091E5AA /* AppleWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F73386F2B9F892E0091E5AA /* AppleWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWalletApp.swift; sourceTree = "<group>"; };
-		9F7338712B9F892E0091E5AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F7338712B9F892E0091E5AA /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		9F7338732B9F89300091E5AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F7338762B9F89300091E5AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9FF69A492BA0AD1F00FEAB1F /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +54,10 @@
 		9F1005B72BA04F9200B76CAE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9F7338712B9F892E0091E5AA /* ContentView.swift */,
+				9F7338712B9F892E0091E5AA /* WalletView.swift */,
 				9F1005B82BA04FCB00B76CAE /* TransactionsHistoryView.swift */,
 				9F1005BA2BA0595600B76CAE /* CardView.swift */,
+				9FF69A492BA0AD1F00FEAB1F /* DragState.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,7 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F7338722B9F892E0091E5AA /* ContentView.swift in Sources */,
+				9FF69A4A2BA0AD1F00FEAB1F /* DragState.swift in Sources */,
+				9F7338722B9F892E0091E5AA /* WalletView.swift in Sources */,
 				9F7338702B9F892E0091E5AA /* AppleWalletApp.swift in Sources */,
 				9F1005B32BA0452900B76CAE /* Transaction.swift in Sources */,
 				9F1005B52BA04D4700B76CAE /* Card.swift in Sources */,
