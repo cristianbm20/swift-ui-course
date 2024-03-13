@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F82BA102BA1C08F0090F750 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82BA0F2BA1C08F0090F750 /* Loan.swift */; };
+		9F82BA122BA1C2360090F750 /* LoanFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F82BA112BA1C2360090F750 /* LoanFactory.swift */; };
 		9FD103DB2BA0CDAB00ACC6B9 /* LoansApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD103DA2BA0CDAB00ACC6B9 /* LoansApp.swift */; };
 		9FD103DD2BA0CDAB00ACC6B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD103DC2BA0CDAB00ACC6B9 /* ContentView.swift */; };
 		9FD103DF2BA0CDAC00ACC6B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD103DE2BA0CDAC00ACC6B9 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F82BA0F2BA1C08F0090F750 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		9F82BA112BA1C2360090F750 /* LoanFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanFactory.swift; sourceTree = "<group>"; };
 		9FD103D72BA0CDAB00ACC6B9 /* Loans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD103DA2BA0CDAB00ACC6B9 /* LoansApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansApp.swift; sourceTree = "<group>"; };
 		9FD103DC2BA0CDAB00ACC6B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +37,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F82BA0E2BA1C0810090F750 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F82BA0F2BA1C08F0090F750 /* Loan.swift */,
+				9F82BA112BA1C2360090F750 /* LoanFactory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9FD103CE2BA0CDAB00ACC6B9 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +65,7 @@
 		9FD103D92BA0CDAB00ACC6B9 /* Loans */ = {
 			isa = PBXGroup;
 			children = (
+				9F82BA0E2BA1C0810090F750 /* Model */,
 				9FD103DA2BA0CDAB00ACC6B9 /* LoansApp.swift */,
 				9FD103DC2BA0CDAB00ACC6B9 /* ContentView.swift */,
 				9FD103DE2BA0CDAC00ACC6B9 /* Assets.xcassets */,
@@ -140,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FD103DD2BA0CDAB00ACC6B9 /* ContentView.swift in Sources */,
+				9F82BA102BA1C08F0090F750 /* Loan.swift in Sources */,
+				9F82BA122BA1C2360090F750 /* LoanFactory.swift in Sources */,
 				9FD103DB2BA0CDAB00ACC6B9 /* LoansApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
