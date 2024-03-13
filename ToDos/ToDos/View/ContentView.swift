@@ -30,7 +30,7 @@ struct ContentView: View {
             showNewTask = true
           } label: {
             Image(systemName: "plus")
-              .font(.title)
+              .font(.system(.title, weight: .bold))
               .foregroundStyle(.blue)
           }
         }
@@ -92,7 +92,7 @@ struct NoTaskView: View {
   }
 }
 
-#Preview("No Task View") {
+#Preview("NoTaskView") {
   NoTaskView()
 }
 
@@ -117,6 +117,10 @@ struct TaskCellView: View {
   }
 }
 
+#Preview("TaskCellView") {
+  TaskCellView(task: Task(title: "Test", priority: .normal))
+}
+
 struct CheckBoxStyle: ToggleStyle {
   func makeBody(configuration: Configuration) -> some View {
     return HStack {
@@ -132,10 +136,6 @@ struct CheckBoxStyle: ToggleStyle {
       configuration.label
     }
   }
-}
-
-#Preview("Cell") {
-  TaskCellView(task: Task(title: "Test", priority: .high))
 }
 
 struct BlankView: View {

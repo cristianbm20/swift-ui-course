@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
   var body: some View {
     VStack {
+      Spacer()
+      
       // Modern syntax
       Button {
         print("Modern button has been pressed")
@@ -26,8 +28,9 @@ struct ContentView: View {
             RoundedRectangle(cornerRadius: 18)
               .stroke(.green, lineWidth: 6)
           }
-          .padding(25)
       }
+      
+      Spacer()
       
       // Classic syntax
       Button(action: {
@@ -36,8 +39,9 @@ struct ContentView: View {
         Text("Classic Button")
           .padding()
           .border(.blue, width: 2)
-          .padding(.bottom, 50)
       })
+      
+      Spacer()
       
       // Buttons with image, gradient and shadow
       Button {
@@ -57,6 +61,8 @@ struct ContentView: View {
       }
       .buttonStyle(GradientButtonStyle(color1: "Jodhpur 1", color2: "Jodhpur 2"))
       
+      Spacer()
+      
       Button {
         print("Button Share has been pressed")
       } label: {
@@ -73,6 +79,8 @@ struct ContentView: View {
         )
       }
       .buttonStyle(GradientButtonStyle(color1: "Easymed 1", color2: "Easymed 2"))
+      
+      Spacer()
       
       Button {
         print("Button Delete has been pressed")
@@ -91,6 +99,8 @@ struct ContentView: View {
       }
       .buttonStyle(GradientButtonStyle(color1: "Burning 1", color2: "Burning 2"))
       
+      Spacer()
+      
       Button {
         print("Button Plus has been pressed")
       } label: {
@@ -100,6 +110,7 @@ struct ContentView: View {
       }
       .buttonStyle(PlusButtonStyle())
     }
+    .padding(.horizontal, 24)
   }
 }
 
@@ -115,7 +126,6 @@ struct GradientButtonStyle: ButtonStyle {
       .background(LinearGradient(colors: [Color(color1), Color(color2)], startPoint: .trailing, endPoint: .leading))
       .cornerRadius(32)
       .shadow(color: .gray ,radius: 10, x: 10, y: 10)
-      .padding([.horizontal, .bottom], 25)
       .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
   }
 }
@@ -128,10 +138,8 @@ struct PlusButtonStyle: ButtonStyle {
       .background(Color.blue)
       .clipShape(Circle())
       .rotationEffect(configuration.isPressed ? .degrees(45) : .degrees(0))
-      .padding(.top, 10)
   }
 }
-
 
 #Preview {
   ContentView()
