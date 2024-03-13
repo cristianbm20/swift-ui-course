@@ -8,6 +8,7 @@
 import Foundation
 
 class LoanFactory: Decodable, ObservableObject {
+  private var downloadedLoans: [Loan] = []
   @Published var loans: [Loan] = []
   
   enum CodingKeys: CodingKey {
@@ -25,8 +26,8 @@ class LoanFactory: Decodable, ObservableObject {
     self.loans = []
   }
   
-  // MARK: - Api download
-  private static var apiURL = "https://api.kiva.org/v1/loans/newest.json"
+  // MARK: - Api Download
+  private static var apiURL = "https://api.kivaws.org/v1/loans/newest.json"
   
   func fetchFromApi() {
     guard let url = URL(string: LoanFactory.apiURL) else {
@@ -44,7 +45,9 @@ class LoanFactory: Decodable, ObservableObject {
       // If the JSON arrives correctly
       if let data = data {
         DispatchQueue.main.async {
-          self.loans = self.parseJson(data: data)
+          let fetchedLoans = self.parseJson(data: data)
+          self.downloadedLoans = fetchedLoans
+          self.loans = fetchedLoans
         }
       }
     }
@@ -66,5 +69,9 @@ class LoanFactory: Decodable, ObservableObject {
     return loans
   }
   
+  // MARK: - Filter Loans
+  func filterLoans(maxAmount: Int) {
+    self.loans = self.downloadedLoans.filter { $0.amount < maxAmount }
+  }
   
 }
