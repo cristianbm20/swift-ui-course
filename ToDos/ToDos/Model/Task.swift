@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 enum Priority: Int {
   case low = 1
@@ -36,16 +37,26 @@ enum Priority: Int {
   }
 }
 
-@Observable class Task: Identifiable {
+@Model class Task: Identifiable {
   var id: UUID
   var title: String
-  var priority: Priority
+  @Transient var priority: Priority {
+    get {
+      return Priority(rawValue: Int(priorityNum)) ?? .normal
+    }
+    
+    set {
+      priorityNum = Int(newValue.rawValue)
+    }
+  }
+  @Attribute(originalName: "priority") var priorityNum: Priority.RawValue
   var isCompleted: Bool
   
   init(id: UUID = UUID(), title: String = "", priority: Priority = .normal, isCompleted: Bool = false) {
     self.id = id
     self.title = title
-    self.priority = priority
     self.isCompleted = isCompleted
+    self.priorityNum = priority.rawValue
+    self.priority = priority
   }
 }

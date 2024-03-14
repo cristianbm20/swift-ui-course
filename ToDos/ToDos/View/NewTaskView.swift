@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct NewTaskView: View {
+  @Environment(\.colorScheme) var colorScheme
+  @Environment(\.modelContext) private var modelContext
   @Binding var isShow: Bool
-  @Binding var tasks: [Task]
   
   @State var title: String
   @State var priority: Priority
@@ -31,14 +32,14 @@ struct NewTaskView: View {
         }
       }
       
-      HStack {
-        TextField("Task description", text: $title)
-          .font(.system(.headline))
+      TextField("Task description", text: $title) { editingChanged in
+        isEditing = editingChanged
       }
-      .padding(.top, 24)
-      
-      Divider()
-        .background(.black)
+      .font(.system(.headline))
+      .padding(12)
+      .background(colorScheme == .dark ? Color(.systemGray4) : Color(.systemGray5))
+      .clipShape(RoundedRectangle(cornerRadius: 12))
+      .foregroundColor(Color.white)
       
       HStack {
         Text("Priority")
@@ -47,41 +48,47 @@ struct NewTaskView: View {
         Spacer()
         
         Button {
-          
+          priority = .low
         } label: {
           Text("Low")
             .font(.system(.body, design: .rounded, weight: .semibold))
         }
-        .tint(.green)
+        .tint(priority == .low ? Priority.low.color() : Color(.systemGray2))
         .buttonStyle(.borderedProminent)
         .buttonBorderShape(.capsule)
         
         Button {
-          
+          priority = .normal
         } label: {
           Text("Normal")
             .font(.system(.body, design: .rounded, weight: .semibold))
         }
-        .tint(.orange)
+        .tint(priority == .normal ? Priority.normal.color() : Color(.systemGray2))
         .buttonStyle(.borderedProminent)
         .buttonBorderShape(.capsule)
         
         Button {
-          
+          priority = .high
         } label: {
           Text("High")
             .font(.system(.body, design: .rounded, weight: .semibold))
         }
-        .tint(.red)
+        .tint(priority == .high ? Priority.high.color() : Color(.systemGray2))
         .buttonStyle(.borderedProminent)
         .buttonBorderShape(.capsule)
       }
       .padding([.bottom, .top], 24)
       
       Button {
-        print("pressed")
+        if title.trimmingCharacters(in: .whitespaces) == "" {
+          return
+        }
+        
+        isShow = false
+        let newTask = Task(title: title, priority: priority, isCompleted: false)
+        modelContext.insert(newTask)
       } label: {
-        Text("Create Task")
+        Text("Save Task")
           .font(.system(.title3, design: .rounded, weight: .semibold))
           .frame(minWidth: 0, maxWidth: .infinity)
           .padding(12)
@@ -89,16 +96,17 @@ struct NewTaskView: View {
           .background(.blue)
           .clipShape(RoundedRectangle(cornerRadius: 12))
       }
-      
-      
-      
-      
+
     }
     .padding(24)
+    .clipShape(RoundedRectangle(cornerRadius: 12))
+    .offset(y: isEditing ? -80 : -220)
+    .edgesIgnoringSafeArea(.bottom)
     
   }
+  
 }
 
 #Preview {
-  NewTaskView(isShow: .constant(true), tasks: .constant([]), title: "", priority: .normal)
+  NewTaskView(isShow: .constant(true),  title: "", priority: .normal)
 }

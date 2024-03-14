@@ -36,6 +36,10 @@ struct ContentView: View {
         }
         .padding()
         
+        if tasks.count == 0 {
+          NoTaskView()
+        }
+        
         List {
           ForEach(tasks) { task in
             TaskCellView(task: task)
@@ -45,28 +49,18 @@ struct ContentView: View {
         .rotation3DEffect(
           Angle(degrees: showNewTask ? 8 : 0), axis: (x: 1.0, y: 0.0, z: 0.0)
         )
-        .offset(y: showNewTask ? -40 : 0)
+        .offset(y: showNewTask ? -10 : 0)
         .animation(.easeInOut, value: showNewTask)
         .onAppear {
           UITableView.appearance().separatorColor = .clear
         }
-        
-        if tasks.count == 0 {
-          NoTaskView()
-        }
-        
-        if showNewTask {
-          BlankView(backgroundColor: .gray)
-            .opacity(0.4)
-            .onTapGesture {
-              showNewTask = false
-            }
-          
-          NewTaskView(isShow: $showNewTask, tasks: $tasks, title: "", priority: .normal)
+        .sheet(isPresented: $showNewTask, content: {
+          NewTaskView(isShow: $showNewTask, title: "", priority: .normal)
             .transition(.move(edge: .bottom))
             .animation(.interpolatingSpring(stiffness: 180.0, damping: 20.0, initialVelocity: 12.0), value: showNewTask)
-        }
-        
+            .presentationDetents([.large])
+        })
+
       }
     }
   }
@@ -82,7 +76,7 @@ struct NoTaskView: View {
     VStack {
       Image("empty")
         .resizable()
-        .scaledToFit()
+        .scaledToFill()
       
       Text("There are no pending tasks. Press the button in the upper left corner to create one.")
         .font(.system(.headline, design: .rounded))
@@ -143,10 +137,9 @@ struct BlankView: View {
   
   var body: some View {
     VStack {
-      Spacer()
+      
     }
     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
     .background(backgroundColor)
-    .edgesIgnoringSafeArea(.all)
   }
 }
