@@ -9,7 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-  @State var tasks: [Task] = []
+  @Environment(\.modelContext) private var modelContext
+  @Query(sort: \Task.priorityNum, order: .reverse) var tasks: [Task]
   
   // MARK: Create new task
   @State private var newTaskTitle: String = ""
@@ -44,16 +45,15 @@ struct ContentView: View {
           ForEach(tasks) { task in
             TaskCellView(task: task)
           }
+          .onDelete(perform: { indexSet in
+            deleteTask(indexSet: indexSet)
+          })
         }
         .listStyle(.plain)
         .rotation3DEffect(
           Angle(degrees: showNewTask ? 8 : 0), axis: (x: 1.0, y: 0.0, z: 0.0)
         )
-        .offset(y: showNewTask ? -10 : 0)
         .animation(.easeInOut, value: showNewTask)
-        .onAppear {
-          UITableView.appearance().separatorColor = .clear
-        }
         .sheet(isPresented: $showNewTask, content: {
           NewTaskView(isShow: $showNewTask, title: "", priority: .normal)
             .transition(.move(edge: .bottom))
@@ -65,11 +65,35 @@ struct ContentView: View {
     }
   }
   
+  private func deleteTask(indexSet: IndexSet) {
+    for index in indexSet {
+      let taskToDelete = tasks[index]
+      modelContext.delete(taskToDelete)
+    }
+  }
+  
 }
 
 #Preview {
   ContentView()
+    .modelContainer(previewContainer)
 }
+
+@MainActor
+let previewContainer: ModelContainer = {
+  do {
+    let container = try ModelContainer(for: Task.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+    
+    for index in 1...5 {
+      let newTask  = Task(title: "Task \(index)")
+      container.mainContext.insert(newTask)
+    }
+    
+    return container
+  } catch {
+    fatalError("Error creating the container")
+  }
+}()
 
 struct NoTaskView: View {
   var body: some View {

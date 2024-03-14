@@ -39,7 +39,6 @@ struct NewTaskView: View {
       .padding(12)
       .background(colorScheme == .dark ? Color(.systemGray4) : Color(.systemGray5))
       .clipShape(RoundedRectangle(cornerRadius: 12))
-      .foregroundColor(Color.white)
       
       HStack {
         Text("Priority")
