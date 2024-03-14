@@ -18,6 +18,9 @@ struct ContentView: View {
   
   @State private var showNewTask = false
   
+  // MARK: Text for search
+  @State private var searchText = ""
+  
   var body: some View {
     ZStack {
       VStack {
@@ -37,12 +40,15 @@ struct ContentView: View {
         }
         .padding()
         
+        SearchBar(text: $searchText)
+          .padding(.top, -24)
+        
         if tasks.count == 0 {
           NoTaskView()
         }
         
         List {
-          ForEach(tasks) { task in
+          ForEach(tasks.filter({ searchText.isEmpty ? true : $0.title.lowercased().contains(searchText) })) { task in
             TaskCellView(task: task)
           }
           .onDelete(perform: { indexSet in
