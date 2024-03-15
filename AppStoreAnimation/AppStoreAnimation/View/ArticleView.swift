@@ -91,9 +91,10 @@ struct ArticleView: View {
               }
             } label: {
               Image(systemName: "multiply.circle.fill")
-                .font(.system(size: 24))
+                .font(.system(size: 28))
                 .foregroundStyle(.white)
-                .padding(24)
+                .padding(.top, 46)
+                .padding(.trailing, 24)
             }
           }
         }
