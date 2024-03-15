@@ -41,7 +41,6 @@
 		9F7338432B9F4AB70091E5AA = {
 			isa = PBXGroup;
 			children = (
-				9F7338612B9F5F400091E5AA /* DragState.swift */,
 				9F73384E2B9F4AB70091E5AA /* SwipeGesture */,
 				9F73384D2B9F4AB70091E5AA /* Products */,
 			);
@@ -62,6 +61,7 @@
 				9F7338512B9F4AB70091E5AA /* ContentView.swift */,
 				9F73385D2B9F4B470091E5AA /* Boss.swift */,
 				9F73385F2B9F51440091E5AA /* CardView.swift */,
+				9F7338612B9F5F400091E5AA /* DragState.swift */,
 				9F7338532B9F4AB80091E5AA /* Assets.xcassets */,
 				9F7338552B9F4AB80091E5AA /* Preview Content */,
 			);
