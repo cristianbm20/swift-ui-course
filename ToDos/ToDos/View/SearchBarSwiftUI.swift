@@ -14,7 +14,7 @@ struct SearchBarSwiftUI: View {
   var body: some View {
     HStack {
       TextField("Search", text: $text)
-        .textInputAutocapitalization(.characters)
+//        .textInputAutocapitalization(.characters)
         .padding(12)
         .padding(.horizontal, 32)
         .background(Color(.systemGray6))
