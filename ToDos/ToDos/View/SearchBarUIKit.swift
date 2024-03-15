@@ -1,5 +1,5 @@
 //
-//  SearchBar.swift
+//  SearchBarUIKit.swift
 //  ToDos
 //
 //  Created by Cristian Bermudez Martinez on 14/3/24.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 #Preview {
-  SearchBar(text: .constant(""))
+  SearchBarUIKit(text: .constant(""))
 }
 
-struct SearchBar: UIViewRepresentable {
+struct SearchBarUIKit: UIViewRepresentable {
   @Binding var text: String
   
   func makeUIView(context: Context) -> UISearchBar {

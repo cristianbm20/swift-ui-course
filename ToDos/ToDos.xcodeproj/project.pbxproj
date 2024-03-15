@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F32E41E2BA437E4003EF10D /* SearchBarSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F32E41D2BA437E4003EF10D /* SearchBarSwiftUI.swift */; };
 		9F6AAB372BA20A7D003B2EF5 /* ToDosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AAB362BA20A7D003B2EF5 /* ToDosApp.swift */; };
 		9F6AAB392BA20A7D003B2EF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AAB382BA20A7D003B2EF5 /* ContentView.swift */; };
 		9F6AAB3D2BA20A7E003B2EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6AAB3C2BA20A7E003B2EF5 /* Assets.xcassets */; };
 		9F6AAB402BA20A7E003B2EF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6AAB3F2BA20A7E003B2EF5 /* Preview Assets.xcassets */; };
 		9F6AAB482BA20BD2003B2EF5 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AAB472BA20BD2003B2EF5 /* Task.swift */; };
 		9F6AAB4B2BA220D5003B2EF5 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6AAB4A2BA220D5003B2EF5 /* NewTaskView.swift */; };
-		9F7D92B52BA3597000016CC7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D92B42BA3597000016CC7 /* SearchBar.swift */; };
+		9F7D92B52BA3597000016CC7 /* SearchBarUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7D92B42BA3597000016CC7 /* SearchBarUIKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F32E41D2BA437E4003EF10D /* SearchBarSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarSwiftUI.swift; sourceTree = "<group>"; };
 		9F6AAB332BA20A7D003B2EF5 /* ToDos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6AAB362BA20A7D003B2EF5 /* ToDosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDosApp.swift; sourceTree = "<group>"; };
 		9F6AAB382BA20A7D003B2EF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,7 +26,7 @@
 		9F6AAB3F2BA20A7E003B2EF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F6AAB472BA20BD2003B2EF5 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		9F6AAB4A2BA220D5003B2EF5 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
-		9F7D92B42BA3597000016CC7 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		9F7D92B42BA3597000016CC7 /* SearchBarUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarUIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,8 @@
 			children = (
 				9F6AAB382BA20A7D003B2EF5 /* ContentView.swift */,
 				9F6AAB4A2BA220D5003B2EF5 /* NewTaskView.swift */,
-				9F7D92B42BA3597000016CC7 /* SearchBar.swift */,
+				9F7D92B42BA3597000016CC7 /* SearchBarUIKit.swift */,
+				9F32E41D2BA437E4003EF10D /* SearchBarSwiftUI.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,7 +167,8 @@
 			files = (
 				9F6AAB4B2BA220D5003B2EF5 /* NewTaskView.swift in Sources */,
 				9F6AAB482BA20BD2003B2EF5 /* Task.swift in Sources */,
-				9F7D92B52BA3597000016CC7 /* SearchBar.swift in Sources */,
+				9F7D92B52BA3597000016CC7 /* SearchBarUIKit.swift in Sources */,
+				9F32E41E2BA437E4003EF10D /* SearchBarSwiftUI.swift in Sources */,
 				9F6AAB392BA20A7D003B2EF5 /* ContentView.swift in Sources */,
 				9F6AAB372BA20A7D003B2EF5 /* ToDosApp.swift in Sources */,
 			);

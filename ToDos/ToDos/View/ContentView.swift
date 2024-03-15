@@ -40,15 +40,18 @@ struct ContentView: View {
         }
         .padding()
         
-        SearchBar(text: $searchText)
-          .padding(.top, -24)
+//        SearchBarUIKit(text: $searchText)
+//          .padding(.top, -24)
+        
+        SearchBarSwiftUI(text: $searchText)
+          .padding(.bottom, 12)
         
         if tasks.count == 0 {
           NoTaskView()
         }
         
         List {
-          ForEach(tasks.filter({ searchText.isEmpty ? true : $0.title.lowercased().contains(searchText) })) { task in
+          ForEach(tasks.filter({ searchText.isEmpty ? true : $0.title.lowercased().contains(searchText.lowercased()) })) { task in
             TaskCellView(task: task)
           }
           .onDelete(perform: { indexSet in
@@ -141,9 +144,9 @@ struct TaskCellView: View {
   }
 }
 
-#Preview("TaskCellView") {
-  TaskCellView(task: Task(title: "Test", priority: .normal))
-}
+//#Preview("TaskCellView") {
+//  TaskCellView(task: Task(title: "Test", priority: .normal))
+//}
 
 struct CheckBoxStyle: ToggleStyle {
   func makeBody(configuration: Configuration) -> some View {
