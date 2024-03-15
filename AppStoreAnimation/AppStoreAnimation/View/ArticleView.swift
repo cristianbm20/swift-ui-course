@@ -8,55 +8,102 @@
 import SwiftUI
 
 struct ArticleView: View {
-  var article: Article
+  let name: String
+  let author: String
+  let excerpt: String
+  let image: UIImage
+  let difficulty: Int
+  let content: String
+  
+  @Binding var isFullContent: Bool
   
   var body: some View {
-    ScrollView {
-      VStack {
-        ZStack {
-          Image(article.image)
-            .resizable()
-            .scaledToFill()
-            .frame(minWidth: 0, maxWidth: .infinity)
-            .clipShape(RoundedRectangle(cornerRadius: 24))
-          
+    GeometryReader { geometry in
+      ZStack(alignment: .topTrailing) {
+        ScrollView {
           VStack {
-            Spacer()
-            
-            VStack(alignment: .leading) {
-              Text(article.author.uppercased())
-                .font(.system(.title3, weight: .bold))
-                .foregroundStyle(.black)
+            ZStack {
+              Image(uiImage: image)
+                .resizable()
+                .scaledToFill()
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .clipShape(RoundedRectangle(cornerRadius: 24))
               
-              Text(article.name)
-                .font(.system(.largeTitle, weight: .bold))
-                .foregroundStyle(.black)
-                .lineLimit(2)
+              VStack {
+                Spacer()
+                
+                VStack(alignment: .leading) {
+                  Text(author.uppercased())
+                    .font(.system(.title3, weight: .bold))
+                    .foregroundStyle(.black)
+                  
+                  Text(name)
+                    .font(.system(.largeTitle, weight: .bold))
+                    .minimumScaleFactor(0.5)
+                    .foregroundStyle(.black)
+                    .lineLimit(2)
+                  
+                  if isFullContent {
+                    Text("Difficulty: \(difficulty)/5")
+                      .font(.system(.title3, weight: .bold))
+                      .minimumScaleFactor(0.5)
+                      .foregroundStyle(.black)
+                  } else {
+                    Text(excerpt)
+                      .font(.system(.subheadline, weight: .semibold))
+                      .foregroundStyle(.black)
+                      .minimumScaleFactor(0.8)
+                      .lineLimit(3)
+                  }
+                  
+                  
+                  
+                }
+                .padding()
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 180)
+                .background(Color.white.opacity(0.4))
+                .clipShape(RoundedRectangle(cornerRadius: 24))
+                
+              }
+              
             }
-            .padding(.vertical)
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 150)
-            .background(Color.white.opacity(0.4))
-            .clipShape(RoundedRectangle(cornerRadius: 24))
+            .frame(height: isFullContent ? 500 : 300)
+            
+            if isFullContent {
+              Text(excerpt)
+                .padding()
+              
+              Text(content)
+                .padding(.horizontal)
+            }
             
           }
           
         }
-        .frame(height: 500)
         
-        Text(article.excerpt)
-          .padding()
-        
-        Text(article.content)
-          .padding()
+        if isFullContent {
+          HStack {
+            Spacer()
+            
+            Button {
+              withAnimation {
+                isFullContent = false
+              }
+            } label: {
+              Image(systemName: "multiply.circle.fill")
+                .font(.system(size: 24))
+                .foregroundStyle(.white)
+                .padding(24)
+            }
+          }
+        }
       }
-      
     }
-    .ignoresSafeArea(.all, edges: .top)
     
   }
   
 }
 
 #Preview {
-  ArticleView(article: Article(name: "Royal Knight Loretta", author: "Elden Ring Wiki", difficulty: 4, excerpt: "Royal Knight Loretta is a Greater Foe Boss in Elden Ring. Royal Knight Loretta is the spirit of a knight riding atop her steed.", image: "loretta", content: "She wields a polearm and utilizes powerful glintstone sorceries to punish would-be trespassers to her domain, the Caria Manor in northern Liurnia of the Lakes. This is an optional boss as players don't need to defeat her to advance in Elden Ring, though they do need to defeat her to reach the Three Sisters and achieve a certain ending.", url: "https://eldenring.wiki.fextralife.com/Royal+Knight+Loretta"))
+  ArticleView(name: articles[6].name, author: articles[6].author, excerpt: articles[6].excerpt, image: UIImage(named: articles[6].image)!, difficulty: articles[6].difficulty, content: articles[6].content, isFullContent: .constant(true))
 }

@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "D64B36D6-2204-4E4D-BC12-816B1685FBF2_1_105_c.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "erdtree.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
