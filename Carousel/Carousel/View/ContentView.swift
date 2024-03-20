@@ -69,7 +69,7 @@ struct ContentView: View {
           .transition(.move(edge: .bottom))
         
         Button {
-          withAnimation(.linear(duration: 0.5)) {
+          withAnimation(.easeInOut(duration: 0.25)) {
             isCardSelected = false
           }
         } label: {
