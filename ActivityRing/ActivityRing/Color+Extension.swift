@@ -33,6 +33,4 @@ extension Color {
   
   public static let lightYellow = Color(red: 240, green: 150, blue: 20)
   public static let darkYellow = Color(red: 230, green: 130, blue: 10)
-  
-  public static let bgColor = Color(red: 70, green: 60, blue: 200)
 }
