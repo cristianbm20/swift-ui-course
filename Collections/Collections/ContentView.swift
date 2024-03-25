@@ -9,22 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
   private var elements = ["macbook", "macpro.gen3", "display", "magicmouse.fill", "keyboard", "ipad", "airtag", "iphone", "applewatch", "airpodsmax", "airpodspro", "airpods.gen3", "homepod.fill", "homepodmini.fill"]
-  private var colGrid = Array(repeating: GridItem(.flexible(), spacing: 6), count: 3)
-  private var colors: [Color] = [.pink, .yellow, .blue]
+  private var layout = [
+    GridItem(.fixed(100)),
+    GridItem(.adaptive(minimum: 50, maximum: 200))
+  ]
+  private var colors: [Color] = [.blue, .yellow, .green]
   
   
   var body: some View {
-    ScrollView {
-      LazyVGrid(columns: colGrid) {
-        ForEach(0...99, id: \.self) {
+    ScrollView(.horizontal) {
+      LazyHGrid(rows: layout, spacing: 24) {
+        ForEach(0...200, id: \.self) {
           Image(systemName: elements[$0 % elements.count])
             .font(.system(size: 35))
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 80)
+            .frame(minWidth: 0, maxWidth: 100, minHeight: 0, maxHeight: .infinity)
             .background(colors[$0 % colors.count])
             .clipShape(RoundedRectangle(cornerRadius: 16))
         }
       }
-      .padding()
     }
   }
 }

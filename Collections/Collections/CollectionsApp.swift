@@ -11,7 +11,8 @@ import SwiftUI
 struct CollectionsApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+//      ContentView()
+      LearningPathsView()
     }
   }
 }
