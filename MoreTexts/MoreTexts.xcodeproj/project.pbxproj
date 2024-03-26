@@ -11,6 +11,7 @@
 		9FB2F1AA2BB2D46E006FE15E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB2F1A92BB2D46E006FE15E /* ContentView.swift */; };
 		9FB2F1AC2BB2D470006FE15E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FB2F1AB2BB2D470006FE15E /* Assets.xcassets */; };
 		9FB2F1AF2BB2D470006FE15E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FB2F1AE2BB2D470006FE15E /* Preview Assets.xcassets */; };
+		9FB2F1B62BB2D73F006FE15E /* ExpandableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB2F1B52BB2D73F006FE15E /* ExpandableTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		9FB2F1A92BB2D46E006FE15E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9FB2F1AB2BB2D470006FE15E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FB2F1AE2BB2D470006FE15E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9FB2F1B52BB2D73F006FE15E /* ExpandableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				9FB2F1A72BB2D46E006FE15E /* MoreTextsApp.swift */,
 				9FB2F1A92BB2D46E006FE15E /* ContentView.swift */,
+				9FB2F1B52BB2D73F006FE15E /* ExpandableTextField.swift */,
 				9FB2F1AB2BB2D470006FE15E /* Assets.xcassets */,
 				9FB2F1AD2BB2D470006FE15E /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB2F1B62BB2D73F006FE15E /* ExpandableTextField.swift in Sources */,
 				9FB2F1AA2BB2D46E006FE15E /* ContentView.swift in Sources */,
 				9FB2F1A82BB2D46E006FE15E /* MoreTextsApp.swift in Sources */,
 			);

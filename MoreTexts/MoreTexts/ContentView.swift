@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+  @State private var text = "This is a text editor..."
+  @State private var wordCount: Int = 0
+  
   var body: some View {
-    VStack {
-      Image(systemName: "globe")
-        .imageScale(.large)
-        .foregroundStyle(.tint)
-      Text("Hello, world!")
+    ZStack(alignment: .topTrailing) {
+      TextEditor(text: $text)
+        .font(.system(.title2, design: .rounded))
+        .lineSpacing(24)
+        .autocorrectionDisabled(true)
+        .padding()
+        .onChange(of: text) {
+          let words = text.split { $0 == " " || $0.isNewline }
+          wordCount = words.count
+      }
+      
+      Text("\(wordCount) words")
+        .font(.system(.headline, design: .rounded))
+        .foregroundStyle(.secondary)
+        .padding(.trailing)
     }
-    .padding()
+    
+    
   }
 }
 
