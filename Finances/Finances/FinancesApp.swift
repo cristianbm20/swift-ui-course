@@ -12,7 +12,7 @@ import SwiftData
 struct FinancesApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      DashboardView()
     }
     .modelContainer(for: PaymentRecord.self)
   }
